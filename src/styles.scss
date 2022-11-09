@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "~@porsche-design-system/utilities/scss";
+@include mat.core();
+
+$my-custom-typography: mat.define-typography-config(
+  $font-family: $p-font-family,
+);
+
+@include mat.core($my-custom-typography);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $p-font-family;
+}
